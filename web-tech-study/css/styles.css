@@ -1,0 +1,607 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Nunito:wght@200&family=Raleway:wght@200&display=swap");
+
+/* 
+==========
+Root
+==========
+*/
+
+:root {
+  /* colors */
+  /* white */
+  --white: hsl(0, 0%, 100%);
+  --b-white: hsl(0, 0%, 97%);
+  /* black */
+  --black: hsl(0, 0%, 0%);
+  /* color blue */
+  /* blue-grey shade light */
+  --blue-grey-1: hsl(216, 28%, 93%);
+  --blue-grey-2: hsl(220, 30%, 86%);
+  --blue-grey-3: hsl(220, 28%, 79%);
+  --blue-grey-4: hsl(221, 29%, 72%);
+  --blue-grey-5: hsl(220, 29%, 65%);
+  --blue-grey-6: hsl(219, 29%, 58%);
+  --blue-grey-7: hsl(220, 29%, 51%);
+  --blue-grey-8: hsl(220, 36%, 45%);
+  --blue-grey-9: hsl(220, 48%, 38%);
+  --blue-grey-primary: hsl(220, 65%, 31%);
+  /* blue-grey shade dark */
+  --blue-grey-9-d: hsl(220, 66%, 27%);
+  --blue-grey-8-d: hsl(220, 65%, 25%);
+  --blue-grey-7-d: hsl(220, 65%, 21%);
+  --blue-grey-6-d: hsl(219, 66%, 18%);
+  --blue-grey-5-d: hsl(220, 65%, 15%);
+  --blue-grey-4-d: hsl(221, 65%, 12%);
+  --blue-grey-3-d: hsl(221, 66%, 9%);
+  --blue-grey-2-d: hsl(220, 68%, 6%);
+  --blue-grey-1-d: hsl(222, 63%, 3%);
+  --blue-grey-primary: ;
+  /* blue primary light */
+  --blue-1: hsl(240, 100%, 95%);
+  --blue-2: hsl(240, 100%, 90%);
+  --blue-3: hsl(240, 100%, 85%);
+  --blue-4: hsl(240, 100%, 80%);
+  --blue-5: hsl(240, 100%, 75%);
+  --blue-6: hsl(240, 100%, 70%);
+  --blue-7: hsl(240, 100%, 65%);
+  --blue-8: hsl(240, 100%, 60%);
+  --blue-9: hsl(240, 100%, 55%);
+  --blue-primary: hsl(240, 100%, 50%);
+  /* blue primary dark */
+  --blue-dark-9: hsl(240, 100%, 45%);
+  --blue-dark-8: hsl(240, 100%, 40%);
+  --blue-dark-7: hsl(240, 100%, 35%);
+  --blue-dark-6: hsl(240, 100%, 30%);
+  --blue-dark-5: hsl(240, 100%, 25%);
+  --blue-dark-4: hsl(240, 100%, 20%);
+  --blue-dark-3: hsl(240, 100%, 15%);
+  --blue-dark-2: hsl(240, 100%, 10%);
+  --blue-dark-1: hsl(240, 100%, 5%);
+  /* green */
+  /* light green */
+  --green-1: hsl(120, 100%, 95%);
+  --green-2: hsl(120, 100%, 90%);
+  --green-3: hsl(120, 100%, 85%);
+  --green-4: hsl(120, 100%, 80%);
+  --green-5: hsl(120, 100%, 75%);
+  --green-6: hsl(120, 100%, 70%);
+  --green-7: hsl(120, 100%, 65%);
+  --green-8: hsl(120, 100%, 60%);
+  --green-9: hsl(120, 100%, 55%);
+  --green-primary: hsl(120, 100%, 50%);
+  /* dark green */
+  --green-dark-9: hsl(120, 100%, 45%);
+  --green-dark-8: hsl(120, 100%, 40%);
+  --green-dark-7: hsl(120, 100%, 35%);
+  --green-dark-6: hsl(120, 100%, 30%);
+  --green-dark-5: hsl(120, 100%, 25%);
+  --green-dark-4: hsl(120, 100%, 20%);
+  --green-dark-3: hsl(120, 100%, 15%);
+  --green-dark-2: hsl(120, 100%, 10%);
+  --green-dark-1: hsl(120, 100%, 5%);
+  /* color grey */
+  /* darkest grey - used for headings */
+  --clr-grey-1: hsl(209, 61%, 16%);
+  --clr-grey-2: hsl(211, 39%, 23%);
+  --clr-grey-3: hsl(209, 34%, 30%);
+  --clr-grey-4: hsl(209, 28%, 39%);
+  /* grey used for paragraphs */
+  --clr-grey-5: hsl(210, 22%, 49%);
+  --clr-grey-6: hsl(209, 23%, 60%);
+  --clr-grey-7: hsl(211, 27%, 70%);
+  --clr-grey-8: hsl(210, 31%, 80%);
+  --clr-grey-9: hsl(212, 33%, 89%);
+  --clr-grey-10: hsl(210, 36%, 96%);
+  /* other function */
+  --max-width: 1170px;
+  --transition: all 0.3s linear;
+  --spacing: 0.25rem;
+  --radius: 0.5rem;
+  /* shadow */
+  --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.25);
+  --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
+  /* fonts */
+  --primaryFont: "Montserrat", sans-serif;
+  --secondaryFont: "Nunito", sans-serif;
+  --tertiaryFont: "Raleway", sans-serif;
+}
+
+/* global code */
+
+body {
+  background-color: var(--b-white);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  /* letter-spacing: var(--spacing); */
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+p {
+  margin-bottom: 1.25rem;
+  color: var(--clr-grey-5);
+}
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.underline {
+  width: 10rem;
+  height: 0.25rem;
+  margin-bottom: 1.25rem;
+  background: var(--blue-dark-4);
+  margin-left: 6rem;
+  padding-left: 25rem;
+  margin-right: auto;
+}
+
+.underline-video {
+  width: 10rem;
+  height: 0.25rem;
+  margin-bottom: 1.25rem;
+  background: var(--blue-dark-4);
+  margin-left: 30rem;
+  padding-left: 25rem;
+  margin-top: 3rem;
+  margin-right: auto;
+}
+
+.underline-services {
+  width: 10rem;
+  height: 0.25rem;
+  margin-bottom: 1.5rem;
+  background: var(--blue-dark-4);
+  margin-left: 28rem;
+  padding-left: 25rem;
+  margin-right: auto;
+}
+
+.underline-tour {
+  width: 10rem;
+  height: 0.25rem;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+  background: var(--blue-dark-4);
+  margin-left: 35rem;
+  padding-left: 15rem;
+  margin-right: auto;
+}
+
+.btn {
+  text-transform: uppercase;
+  color: var(--black);
+  padding: 0.375rem 0.75rem;
+  letter-spacing: var(--spacing);
+  display: inline-block;
+  font-weight: 700;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  font-size: 0.875rem;
+  border: 2px solid;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: var(--radius);
+}
+.btn:hover {
+  color: var(--black);
+  background: transparent;
+}
+
+/* 
+============
+Navbar
+============
+*/
+
+#navbar {
+  overflow: hidden;
+  background-color: #333;
+  z-index: 9999;
+}
+
+/* Navbar links */
+#navbar .navbar-a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 20px;
+  text-decoration: none;
+  padding-left: 18rem;
+}
+
+.navbar-a {
+  font-family: var(--tertiaryFont);
+  font-weight: 700;
+}
+
+/* Page content */
+.content {
+  padding: 16px;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 60px;
+}
+
+/* 
+============
+Header
+============
+*/
+
+.logo-header {
+  height: 40rem;
+  width: 40rem;
+  object-fit: cover;
+  margin-left: 15rem;
+}
+
+.img-header {
+  padding-left: 5rem;
+}
+
+.main-header {
+  background: url(/asset/img/snow.jpg) center/cover no-repeat;
+}
+
+@media screen and (max-width: 992px) {
+  .main-header {
+    background-color: var(--blue-grey-5);
+  }
+}
+
+.header-btn {
+  padding-left: 37rem;
+  padding-bottom: 10rem;
+}
+
+/* 
+============
+About
+============
+*/
+
+.about-section {
+  background-color: var(--b-white);
+  padding-top: 10rem;
+  padding-left: 23rem;
+  justify-items: center;
+  padding-bottom: 10rem;
+}
+
+.about-title {
+  font-family: var(--tertiaryFont);
+  font-size: 4rem;
+  padding-bottom: 5rem;
+  padding-left: 10rem;
+}
+
+.about-p {
+  max-width: 40rem;
+  font-family: var(--primaryFont);
+  color: var(--blue-grey-8);
+}
+
+/* 
+============
+Services
+============
+*/
+
+.title-services {
+  color: var(--black);
+  font-family: var(--tertiaryFont);
+  padding-bottom: 4rem;
+  padding-left: 34rem;
+}
+
+.services-section {
+  padding-top: 5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 5rem;
+  background-color: var(--clr-grey-5);
+}
+
+.service {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.service-icon {
+  background: var(--primaryColor);
+  padding: 0.5rem;
+  display: inline-block;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+.service-title {
+  text-transform: uppercase;
+  color: var(--black);
+  font-family: var(--secondaryFont);
+}
+.service-text {
+  width: 80%;
+  margin: 0 auto;
+  line-height: 1.5;
+  font-weight: 300;
+  color: var(--black);
+  font-family: var(--primaryFont);
+}
+@media screen and (min-width: 576px) {
+  .services-center {
+    display: flex;
+    /* after */
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .service {
+    flex: 0 0 calc(50% - 1rem);
+    /* back to services */
+  }
+}
+@media screen and (min-width: 992px) {
+  .service {
+    flex: 0 0 calc(33.333% - 1rem);
+  }
+}
+@media screen and (min-width: 1170px) {
+  .service {
+    display: flex;
+    text-align: left;
+  }
+  .service-icon {
+    align-self: start;
+  }
+  .service-info {
+    padding-left: 1rem;
+  }
+  .service-title {
+    margin-bottom: 0.5rem;
+  }
+  .service-text {
+    width: 90%;
+    margin: 0;
+  }
+}
+
+/* 
+============
+Tours
+============
+*/
+
+.featured-tours {
+  background: var(--white);
+}
+
+.title {
+  font-family: var(--secondaryFont);
+  font-weight: 700;
+  text-align: center;
+  padding-bottom: 3rem;
+  padding-top: 3rem;
+}
+
+.tour-img {
+  object-fit: cover;
+  width: 25rem;
+  height: 25rem;
+  margin-top: 2rem;
+  margin-left: 1rem;
+  border-radius: var(--radius);
+}
+
+.tour-card {
+  box-shadow: var(--lightShadow);
+  transition: var(--transition);
+  margin-bottom: 4rem;
+  border-radius: var(--radius);
+}
+.tour-card:hover {
+  box-shadow: var(--darkShadow);
+}
+.tour-footer {
+  padding: 1.2rem 1.5rem;
+}
+.tour-title {
+  text-transform: capitalize;
+  font-family: var(--secondaryFont);
+  font-weight: 1000;
+}
+.tour-country {
+  color: var(--green-dark-3);
+  text-transform: capitalize;
+}
+.tour-info {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.tour-details p {
+  line-height: 0.2;
+  text-transform: capitalize;
+  color: var(--clr-grey-3);
+  letter-spacing: 0.02rem;
+  font-family: var(--tertiaryFont);
+  font-weight: 900;
+}
+.tour-country {
+  align-self: center;
+  color: var(--green-dark-3);
+  font-family: var(--tertiaryFont);
+  font-weight: 700;
+}
+.tour-link {
+  text-align: center;
+}
+/* tour date */
+.tour-img-container {
+  position: relative;
+}
+.tour-date {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: var(--black);
+  text-transform: capitalize;
+  padding: 0.25rem 0.5rem;
+}
+@media screen and (min-width: 768px) {
+  .featured-center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .tour-card {
+    flex: 0 0 calc(50% - 1rem);
+  }
+}
+@media screen and (min-width: 1170px) {
+  .tour-card {
+    flex: 0 0 calc(33.3333% - 1rem);
+  }
+}
+
+/* 
+============
+Videos
+============
+*/
+
+.video-title {
+  padding-top: 5rem;
+  padding-left: 30rem;
+  font-family: var(--tertiaryFont);
+}
+
+.video-box {
+  width: 20rem;
+  height: 20rem;
+  justify-content: space-between;
+}
+
+.video-gallery {
+  justify-content: space-between;
+  display: flex;
+}
+
+.gallery-center {
+  display: flex;
+  padding-left: 12rem;
+  padding-top: 2rem;
+}
+
+/* 
+============
+Footer
+============
+*/
+
+.footer {
+  background-color: var(--clr-grey-5);
+  color: var(--white);
+  text-align: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 3rem;
+}
+.footer-links,
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  padding-top: 3rem;
+}
+.footer-link {
+  color: var(--blue-dark-2);
+  text-transform: capitalize;
+  font-size: 1rem;
+  margin-right: 1rem;
+  letter-spacing: var(--spacing);
+  transition: var(--transition);
+  font-family: var(--secondaryFont);
+  font-weight: 700;
+}
+.footer-link:hover {
+  color: var(--blue-4);
+}
+.footer-icon {
+  font-size: 2rem;
+  margin-right: 1rem;
+  color: var(--white);
+  transition: var(--transition);
+}
+.footer-icon:hover {
+  color: var(--green-3);
+}
+.copyright {
+  text-transform: capitalize;
+  letter-spacing: var(--spacing);
+  color: var(--white);
+  font-family: var(--primaryFont);
+  font-weight: 700;
+}
